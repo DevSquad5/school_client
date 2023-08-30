@@ -1,0 +1,90 @@
+.header-bg {
+    background: linear-gradient(5deg, rgba(92, 142, 145, 0.9)  37%, rgba(81, 157, 161, 0.9)  88%);
+}
+
+.notice-bg ul li {
+    list-style-type: disc;
+}
+
+.notice-bg {
+    box-shadow: 0px 0px 10px #fff;
+    border-radius: 10px 10px 0 0;    
+    overflow: hidden;
+}
+
+.notice-bg ul {
+    animation: marquee 50s linear infinite;
+}
+
+.notice-bg:hover ul {
+    animation-play-state: paused;
+}
+
+.navbar > ul > li {
+    position: relative
+}
+
+.navbar ul li a {
+    padding: 15px 10px;
+    display: block;
+    color: #FFFBEC;
+    font-size: 20px; 
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.navbar ul li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1; 
+    opacity: 0;    
+    width: 0;
+    display: none;
+    background-color: #0000009e;
+    transition: 0.5s;
+}
+
+.navbar > ul > li:hover > ul { 
+    display: block;  
+    z-index: 9;
+    opacity: 1;
+    width: 250px;
+}
+
+
+.navbar ul li li a{
+    transition: 0.5s;
+}
+.navbar ul li li:hover a {
+    padding-left: 20px;
+    background: linear-gradient(5deg, rgba(92, 142, 145, 0.9)  37%, rgba(81, 157, 161, 0.9)  88%);
+}
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-40%);
+    font-weight: 900;
+    font-size: 10px;
+    background: url('../../assets/images/arrow-down.png') no-repeat center / 100% 100%;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:first-child::after,
+.navbar ul li:last-child::after{
+    display: none;
+}
+
+  
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
