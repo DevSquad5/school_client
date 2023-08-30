@@ -16,6 +16,10 @@
     animation: marquee 50s linear infinite;
 }
 
+.notice-bg:hover ul {
+    animation-play-state: paused;
+}
+
 .navbar > ul > li {
     position: relative
 }
@@ -37,7 +41,7 @@
     opacity: 0;    
     width: 0;
     display: none;
-    background-color: #00000063;
+    background-color: #0000009e;
     transition: 0.5s;
 }
 
@@ -54,6 +58,7 @@
 }
 .navbar ul li li:hover a {
     padding-left: 20px;
+    background: linear-gradient(5deg, rgba(92, 142, 145, 0.9)  37%, rgba(81, 157, 161, 0.9)  88%);
 }
 .navbar ul li::after {
     content: "";
@@ -73,7 +78,6 @@
 .navbar ul li:last-child::after{
     display: none;
 }
-
 
   
 @keyframes marquee {
